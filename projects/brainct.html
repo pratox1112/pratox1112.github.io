@@ -4,15 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BrainCT: Intracranial Hemorrhage Detection | Pratosh Karthikeyan</title>
-  <meta name="description" content="Case study: BrainCT, intracranial hemorrhage detection taken from raw DICOMs to a load-tested GKE service.">
-  <link rel="canonical" href="https://pratox1112.github.io/projects/brainct.html">
+  <meta name="description" content="Case study: BrainCT, intracranial hemorrhage detection taken from 752,803 raw DICOMs to a load-tested GKE service.">
+  <meta name="theme-color" content="#04071a">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-600.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/styles.css">
-
+  <link rel="canonical" href="https://pratox1112.github.io/projects/brainct.html">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Pratosh Karthikeyan">
   <meta property="og:title" content="BrainCT: Intracranial Hemorrhage Detection">
-  <meta property="og:description" content="Case study: BrainCT, intracranial hemorrhage detection taken from raw DICOMs to a load-tested GKE service.">
+  <meta property="og:description" content="Case study: BrainCT, intracranial hemorrhage detection taken from 752,803 raw DICOMs to a load-tested GKE service.">
   <meta property="og:url" content="https://pratox1112.github.io/projects/brainct.html">
   <meta property="og:image" content="https://pratox1112.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -20,50 +21,47 @@
   <meta property="og:image:alt" content="Pratosh Karthikeyan">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="BrainCT: Intracranial Hemorrhage Detection">
-  <meta name="twitter:description" content="Case study: BrainCT, intracranial hemorrhage detection taken from raw DICOMs to a load-tested GKE service.">
+  <meta name="twitter:description" content="Case study: BrainCT, intracranial hemorrhage detection taken from 752,803 raw DICOMs to a load-tested GKE service.">
   <meta name="twitter:image" content="https://pratox1112.github.io/assets/og-image.png">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <a class="site-name" href="/">Pratosh Karthikeyan</a>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="/#projects">Projects</a></li>
-        <li><a href="/#experience">Experience</a></li>
-        <li><a href="/assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></li>
-        <li><a href="/#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a class="home" href="/" aria-label="Home">PK</a></li>
+      <li><a href="/#projects">Projects</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/assets/resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+  </nav>
 
   <main id="main">
-    <article class="case-study">
-      <a class="back-link" href="/#projects">← Back to projects</a>
-
-      <header class="case-study-head">
+    <header class="hero case-hero">
+      <div class="wrap">
+        <a class="back-link" href="/#projects">← Back to projects</a>
+        <p class="card-tag">MLOps · Medical imaging</p>
         <h1>BrainCT: Intracranial Hemorrhage Detection</h1>
-        <p class="lede"><span class="todo">[TODO: one-sentence summary]</span></p>
-      </header>
+        <p class="lede">A CT hemorrhage detection system built from 752,803 raw DICOMs to a load-tested GKE service.</p>
+      </div>
+    </header>
 
+    <article class="case-study wrap">
       <section class="section" id="at-a-glance" aria-labelledby="at-a-glance-h">
         <h2 id="at-a-glance-h">At a glance</h2>
-        <dl class="pairs">
-          <dt>Role</dt>
-          <dd><span class="todo">[TODO: my role]</span></dd>
-          <dt>Stack</dt>
-          <dd><span class="todo">[TODO: stack]</span></dd>
-          <dt>Timeframe</dt>
-          <dd><span class="todo">[TODO: timeframe]</span></dd>
-          <dt>Links</dt>
-          <dd>
-            <ul class="inline-links">
-              <li><a href="https://github.com/pratox1112/BrainCT-Hemorrhage-MLOps">Repo ↗</a></li>
-              <li><span class="todo">[TODO: demo link, if any]</span></li>
-            </ul>
-          </dd>
-        </dl>
+        <div class="panel">
+          <dl class="pairs">
+            <dt>Role</dt>
+            <dd><span class="todo">[TODO: my role]</span></dd>
+            <dt>Stack</dt>
+            <dd>W&amp;B (training runs), ONNX Runtime (INT8), FastAPI, Kubernetes (GKE) <span class="todo">[TODO: rest of stack from README]</span></dd>
+            <dt>Timeframe</dt>
+            <dd><span class="todo">[TODO: timeframe]</span></dd>
+            <dt>Links</dt>
+            <dd><a href="https://github.com/pratox1112/BrainCT-Hemorrhage-MLOps">Code on GitHub ↗</a> · <span class="todo">[TODO: demo link, if any]</span></dd>
+          </dl>
+        </div>
       </section>
 
       <section class="section" id="problem" aria-labelledby="problem-h">
@@ -83,17 +81,17 @@
 
       <section class="section" id="decisions" aria-labelledby="decisions-h">
         <h2 id="decisions-h">Key decisions</h2>
-        <div class="decision">
+        <div class="decision panel">
           <h3><span class="todo">[TODO: decision 1: the choice]</span></h3>
           <p><strong>Considered:</strong> <span class="todo">[TODO: alternatives]</span></p>
           <p><strong>Why this:</strong> <span class="todo">[TODO: reasoning]</span></p>
         </div>
-        <div class="decision">
+        <div class="decision panel">
           <h3><span class="todo">[TODO: decision 2: the choice]</span></h3>
           <p><strong>Considered:</strong> <span class="todo">[TODO: alternatives]</span></p>
           <p><strong>Why this:</strong> <span class="todo">[TODO: reasoning]</span></p>
         </div>
-        <div class="decision">
+        <div class="decision panel">
           <h3><span class="todo">[TODO: decision 3: the choice]</span></h3>
           <p><strong>Considered:</strong> <span class="todo">[TODO: alternatives]</span></p>
           <p><strong>Why this:</strong> <span class="todo">[TODO: reasoning]</span></p>
@@ -113,19 +111,44 @@
             </thead>
             <tbody>
               <tr>
-                <td><span class="todo">[TODO: metric]</span></td>
-                <td class="value"><span class="todo">[TODO: value]</span></td>
-                <td><span class="todo">[TODO: dataset and split, hardware, load profile]</span></td>
+                <td>Macro AUC</td>
+                <td class="value">0.977</td>
+                <td>Patient-level held-out set; 95% CI 0.973–0.980</td>
               </tr>
               <tr>
-                <td><span class="todo">[TODO: metric]</span></td>
-                <td class="value"><span class="todo">[TODO: value]</span></td>
-                <td><span class="todo">[TODO: dataset and split, hardware, load profile]</span></td>
+                <td>Latency reduction, ONNX INT8</td>
+                <td class="value">4.9×</td>
+                <td>Versus <span class="todo">[TODO: baseline runtime and hardware]</span></td>
               </tr>
               <tr>
-                <td><span class="todo">[TODO: metric]</span></td>
-                <td class="value"><span class="todo">[TODO: value]</span></td>
-                <td><span class="todo">[TODO: dataset and split, hardware, load profile]</span></td>
+                <td>INT8 accuracy cost, CPU with VNNI</td>
+                <td class="value">−0.0013 AUC</td>
+                <td>Change in macro AUC after INT8 quantization</td>
+              </tr>
+              <tr>
+                <td>INT8 accuracy cost, CPU without VNNI</td>
+                <td class="value">−0.0073 AUC</td>
+                <td>Change in macro AUC after INT8 quantization</td>
+              </tr>
+              <tr>
+                <td>p95 latency</td>
+                <td class="value">38.6 ms</td>
+                <td>FastAPI service; <span class="todo">[TODO: load profile and hardware]</span></td>
+              </tr>
+              <tr>
+                <td>Micro-batching throughput gain</td>
+                <td class="value">+55%</td>
+                <td>Only under overload</td>
+              </tr>
+              <tr>
+                <td>Sustained throughput with autoscaling</td>
+                <td class="value">24.2 req/s</td>
+                <td>Autoscaling from 1 to 3 pods; p95 207 ms; 0 errors</td>
+              </tr>
+              <tr>
+                <td>Automated tests</td>
+                <td class="value">420</td>
+                <td>Test suite</td>
               </tr>
             </tbody>
           </table>
@@ -134,8 +157,11 @@
 
       <section class="section" id="what-didnt-work" aria-labelledby="what-didnt-work-h">
         <h2 id="what-didnt-work-h">What didn’t work, and what surprised me</h2>
-        <p><span class="todo">[TODO: what didn't work]</span></p>
-        <p><span class="todo">[TODO: what surprised me]</span></p>
+        <ul>
+          <li>INT8’s accuracy cost depends on CPU support: −0.0013 AUC on CPUs with VNNI versus −0.0073 without.</li>
+          <li>Micro-batching adds 55% throughput only under overload.</li>
+          <li><span class="todo">[TODO: what didn't work]</span></li>
+        </ul>
       </section>
 
       <section class="section" id="next" aria-labelledby="next-h">
@@ -155,17 +181,44 @@
         </ul>
       </section>
 
-      <p class="case-study-end"><a class="back-link" href="/#projects">← Back to projects</a></p>
+      <p class="case-end"><a class="back-link" href="/#projects">← Back to projects</a></p>
     </article>
   </main>
 
-  <footer class="site-footer" id="contact">
-    <ul>
-      <li><a href="mailto:pratoshk993@gmail.com">pratoshk993@gmail.com</a></li>
-      <li><a href="https://github.com/pratox1112">GitHub</a></li>
-      <li><a href="https://www.linkedin.com/in/pratosh-karthik">LinkedIn</a></li>
-    </ul>
-    <p>Last updated <time datetime="2026-11-15">Nov 15, 2026</time></p>
+  <footer class="contact" id="contact">
+    <div class="wrap">
+      <h2>Looking for an ML engineer? <span class="gradient-text">Let’s talk.</span></h2>
+      <p><a href="mailto:pratoshk993@gmail.com">pratoshk993@gmail.com</a></p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="mailto:pratoshk993@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.5l10 6.25L22 6.5V6H2zm20 2.86-9.47 5.92a1 1 0 0 1-1.06 0L2 8.86V18h20V8.86z"/></svg> Email me</a>
+          <button class="button" type="button" data-copy="pratoshk993@gmail.com" aria-describedby="copy-status-footer" hidden><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 2h10a2 2 0 0 1 2 2v12h-2V4H8V2zM4 6h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v12h10V8H4z"/></svg> Copy email</button>
+        <a class="button" href="/assets/resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2h9l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm8 1.5V8h4.5L14 3.5zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg> Resume (PDF)</a>
+      </div>
+        <p class="copy-status" id="copy-status-footer" role="status"></p>
+      <div class="site-footer">
+        <p>© 2026 Pratosh Karthikeyan · Last updated <time datetime="2026-11-15">Nov 15, 2026</time></p>
+        <ul class="social">
+          <li><a class="icon-button" href="https://github.com/pratox1112" aria-label="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a></li>
+          <li><a class="icon-button" href="https://www.linkedin.com/in/pratosh-karthik" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+          <li><a class="icon-button" href="mailto:pratoshk993@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 4h20a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.5l10 6.25L22 6.5V6H2zm20 2.86-9.47 5.92a1 1 0 0 1-1.06 0L2 8.86V18h20V8.86z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Progressive enhancement: reveal "Copy email" buttons only when the Clipboard API exists.
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      if (!navigator.clipboard) return;
+      button.hidden = false;
+      var status = document.getElementById(button.getAttribute("aria-describedby"));
+      button.addEventListener("click", function () {
+        navigator.clipboard.writeText(button.dataset.copy).then(
+          function () { status.textContent = "Email copied to clipboard."; },
+          function () { status.textContent = "Couldn't copy; use the email link instead."; }
+        );
+      });
+    });
+  </script>
 </body>
 </html>

@@ -23,7 +23,7 @@
 
 A fast, simple portfolio that an MLE recruiter or hiring manager can skim in under a minute and come away knowing three things: what I build, my two strongest projects with real results, and how to reach me. It will be linked from my resume header, replacing datascienceportfol.io.
 
-**Done means:** live at pratox1112.github.io, works well on a phone, supports light and dark mode, has two complete case studies, and every number on it is traceable to a source.
+**Done means:** live at pratox1112.github.io, works well on a phone, uses the dark theme (dark only, decided Nov 15, 2026), has two complete case studies, and every number on it is traceable to a source.
 
 ---
 
@@ -119,12 +119,15 @@ pratox1112.github.io/
   - WCAG AA contrast in both themes
 - [x] Commit: `phase 3: design system`
 
-**Approved design (Nov 15, 2026)**
+**Design (revised Nov 15, 2026, replaces the first approved "technical report" design)**
 
-- **Concept:** a technical report, not a landing page. Results are the one loud element: large IBM Plex Mono figures (`.figures`), each with a caption saying how it was measured. Hairline rules and space instead of cards.
-- **Colors (light / dark):** Paper `#FBFBFA` / `#14171C`, Ink `#1B1F24` / `#E6E8EB`, Graphite `#5B6470` / `#9AA3AE`, Hairline `#DADDE1` / `#2A2F36`, Signal `#24489E` / `#9DB7F5`, Signal tint `#EEF1F8` / `#1B2130`. All text pairs pass WCAG AA; all but light Graphite (5.8:1) pass AAA.
-- **Type:** system sans for text; self-hosted IBM Plex Mono 400/600 (`assets/fonts/`, SIL OFL) for figures, tables and dates. Scale: 14 / 17 / 20 / 25 / 30–42 / 36–52 (figures) px.
-- **Components in `styles.css`:** `.section` (heading + rule), `.lede`, `.inline-links`, `.figures`, `.project`, `.entry` / `.entry-head` / `.entry-role`, `.pairs`, `.back-link`, `.diagram`, `.decision`, `.table-wrap` + `td.value`, `.todo`.
+I asked for the look of kaushikmanivannan.com, built in plain HTML/CSS. This deliberately overrides the "avoid" list above (dark background with a glowing accent, rounded cards, gradient washes). The other rules still hold: no framework, no build step, no external scripts, and all content visible without JavaScript or animation.
+
+- **Theme:** dark only. Background `#04071A`, surfaces `#0B1030` / `#121A45`, borders `#232C5C`, text `#EEF0FF`, muted `#A7AED0`, accent `#C4A8FF`, gradient violet `#7C5CFF` → blue `#4F8CFF` → cyan `#5FD4FF`. Every text color passes WCAG AA on every surface (lowest is blue on `#121A45` at 5.2:1).
+- **Layout:** floating pill nav; grid-pattern hero with glows; bento tiles (status, what I build, toolkit, most recently, BrainCT stat, email CTA); project cards with a headline-number visual, figures and stack chips; an experience and education timeline; skill cards; a contact call to action with the footer.
+- **Type:** system sans for text; self-hosted IBM Plex Mono 400/600 for numbers, chips and dates.
+- **Motion:** hover transitions only, disabled under `prefers-reduced-motion`. "Copy email" uses a small inline script and stays hidden when the Clipboard API isn't available; the mailto link always works.
+- **Not reused from the reference:** its images, wording and code. Its 3D renders are replaced by CSS glows and a concentric-ring motif (a nod to CT imaging).
 
 ---
 
@@ -178,12 +181,12 @@ Tasks:
 
 Fill from Appendix A first, then enrich from the repo READMEs. Anything not in a source gets a `[TODO]` placeholder.
 
-- [ ] **Home page:** replace all placeholder copy using Appendix A
+- [x] **Home page:** replace all placeholder copy using Appendix A (positioning line uses option 1: "ML engineer building medical imaging models, LLM systems, and the infrastructure that serves them.")
 - [ ] **BrainCT case study:** source is the BrainCT repo README (URL in Open questions)
 - [ ] **NL2SQL case study:** source is the NL2SQL repo README (URL in Open questions)
 - [ ] **Mayo Clinic:** experience entry at resume-level detail only; no separate page for now
 - [ ] **Architecture diagrams** for both projects, exported to `assets/images/`
-- [ ] **Resume PDF** copied to `assets/resume.pdf` (current MLE version)
+- [ ] **Resume PDF** copied to `assets/resume.pdf` (current MLE version). Blocked: the current PDF includes my phone number; I'll export a version without it (see Open question 8)
 - [ ] **OG preview image** created at 1200×630
 - [ ] Resolve or list every remaining `[TODO]` under Open questions
 - [ ] Commit: `phase 6: content`
@@ -260,12 +263,13 @@ python -m http.server 8000
 ## Open questions
 
 1. ~~**BrainCT repo URL:** probably `github.com/pratox1112/BrainCT-Hemorrhage-MLOps`. Confirm.~~ Resolved: the public repo exists at that URL and is linked from the home page.
-2. **NL2SQL repo URL:** probably `github.com/pratox1112/nl2sql-agentic-rag` (the only public NL2SQL repo); linked from the home page for now. Confirm.
-3. **W&B on BrainCT:** the resume says BrainCT tracks training runs in W&B. Confirm against the repo. If it doesn't use W&B, remove that from the site and the resume.
-4. **NL2SQL evaluation set sizes:** 44.20% is on 500 BIRD-SQL questions, but the domain-hints comparison (44.00% → 52.67%) doesn't divide evenly into 500; those percentages fit a 150- or 300-question subset. Confirm the subset size and state it on the case study so the numbers don't look inconsistent.
+2. ~~**NL2SQL repo URL:** needed.~~ Resolved: `github.com/pratox1112/nl2sql-agentic-rag`, the URL the resume's "(Link)" points to.
+3. ~~**W&B on BrainCT:** confirm against the repo.~~ Resolved: the BrainCT README lists W&B in its badges and architecture diagram ("ResNet-50 training, bf16 AMP, W&B"). Keep it.
+4. ~~**NL2SQL evaluation set sizes.**~~ Resolved: the README shows the domain-hints comparison on a 150-question slice, 44.00% (66/150) → 52.67% (79/150). The site states the slice size next to those numbers.
 5. **Mayo Clinic:** what can be said publicly beyond the resume? Is there a poster, abstract, or paper to link?
 6. **Headshot:** include one or not?
 7. ~~**Old site:** is anything on the `old-site` branch worth carrying over?~~ Resolved: the old site was a single digital-clock demo page; nothing to carry over.
+8. **Resume PDF without phone number:** `Pratosh_Karthikeyan_Resume_MLE.pdf` includes my phone number. Export a copy without it (and with pratox1112.github.io in place of datascienceportfol.io), then save it as `assets/resume.pdf`. Until then the Resume links 404.
 
 ---
 
