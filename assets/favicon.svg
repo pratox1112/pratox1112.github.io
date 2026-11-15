@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Placeholder monogram; colors get updated in Phase 3 -->
+  <!-- Monogram in the site palette: Signal on light, Signal (dark) on dark -->
   <style>
-    rect { fill: #1f2933; }
+    rect { fill: #24489e; }
     text { fill: #ffffff; }
     @media (prefers-color-scheme: dark) {
-      rect { fill: #e4e7eb; }
-      text { fill: #1f2933; }
+      rect { fill: #9db7f5; }
+      text { fill: #14171c; }
     }
   </style>
   <rect width="32" height="32" rx="6"/>

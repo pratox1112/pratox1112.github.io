@@ -96,28 +96,35 @@ pratox1112.github.io/
 
 **Process**
 
-- [ ] Before writing any CSS, propose a short design plan for my approval:
+- [x] Before writing any CSS, propose a short design plan for my approval:
   - 4–6 named hex colors, with light and dark values
   - typefaces and their roles (one or two families, clearly distinct if two)
   - a type scale
   - a layout concept, with ASCII wireframes of the home page and a case-study page, including alignment
   - 2–3 principles that make this site specific to me rather than a generic template
-- [ ] Review the plan against the brief and revise anything that reads like a default template. Avoid:
+- [x] Review the plan against the brief and revise anything that reads like a default template. Avoid:
   - warm cream background with a serif display and a terracotta accent
   - near-black background with a single neon accent
   - content chopped into identical rounded cards with the same soft gray shadow and gradient washes
   - all-caps eyebrow labels above every heading
   - numbered markers (01 / 02 / 03) on content that isn't a sequence
   - fade-and-slide-in animations on every section
-- [ ] Spend the boldness in one place (for example, how results are presented, or the intro). Keep everything else quiet.
-- [ ] Implement colors and type as CSS custom properties on `:root`, with dark values under `@media (prefers-color-scheme: dark)`
-- [ ] Quality floor:
+- [x] Spend the boldness in one place (for example, how results are presented, or the intro). Keep everything else quiet.
+- [x] Implement colors and type as CSS custom properties on `:root`, with dark values under `@media (prefers-color-scheme: dark)`
+- [x] Quality floor:
   - responsive down to 360px wide; no sideways scrolling (wide tables and code scroll inside their own container)
   - body text line length under about 75 characters
   - visible keyboard focus states
   - respects `prefers-reduced-motion`
   - WCAG AA contrast in both themes
-- [ ] Commit: `phase 3: design system`
+- [x] Commit: `phase 3: design system`
+
+**Approved design (Nov 15, 2026)**
+
+- **Concept:** a technical report, not a landing page. Results are the one loud element: large IBM Plex Mono figures (`.figures`), each with a caption saying how it was measured. Hairline rules and space instead of cards.
+- **Colors (light / dark):** Paper `#FBFBFA` / `#14171C`, Ink `#1B1F24` / `#E6E8EB`, Graphite `#5B6470` / `#9AA3AE`, Hairline `#DADDE1` / `#2A2F36`, Signal `#24489E` / `#9DB7F5`, Signal tint `#EEF1F8` / `#1B2130`. All text pairs pass WCAG AA; all but light Graphite (5.8:1) pass AAA.
+- **Type:** system sans for text; self-hosted IBM Plex Mono 400/600 (`assets/fonts/`, SIL OFL) for figures, tables and dates. Scale: 14 / 17 / 20 / 25 / 30–42 / 36–52 (figures) px.
+- **Components in `styles.css`:** `.section` (heading + rule), `.lede`, `.inline-links`, `.figures`, `.project`, `.entry` / `.entry-head` / `.entry-role`, `.pairs`, `.back-link`, `.diagram`, `.decision`, `.table-wrap` + `td.value`, `.todo`.
 
 ---
 
