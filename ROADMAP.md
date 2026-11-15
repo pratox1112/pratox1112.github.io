@@ -142,10 +142,10 @@ Sections, in this order:
 
 Tasks:
 
-- [ ] Build all sections with placeholder copy
-- [ ] Draft 2–3 options for the positioning line for me to choose from. No title inflation: I'm finishing an MS, so no "Senior" or "Lead".
-- [ ] Resume link opens `assets/resume.pdf` in a new tab
-- [ ] Commit: `phase 4: home page structure`
+- [x] Build all sections with placeholder copy
+- [x] Draft 2–3 options for the positioning line for me to choose from. No title inflation: I'm finishing an MS, so no "Senior" or "Lead".
+- [x] Resume link opens `assets/resume.pdf` in a new tab
+- [x] Commit: `phase 4: home page structure`
 
 ---
 
@@ -259,8 +259,8 @@ python -m http.server 8000
 
 ## Open questions
 
-1. **BrainCT repo URL:** probably `github.com/pratox1112/BrainCT-Hemorrhage-MLOps`. Confirm.
-2. **NL2SQL repo URL:** needed.
+1. ~~**BrainCT repo URL:** probably `github.com/pratox1112/BrainCT-Hemorrhage-MLOps`. Confirm.~~ Resolved: the public repo exists at that URL and is linked from the home page.
+2. **NL2SQL repo URL:** probably `github.com/pratox1112/nl2sql-agentic-rag` (the only public NL2SQL repo); linked from the home page for now. Confirm.
 3. **W&B on BrainCT:** the resume says BrainCT tracks training runs in W&B. Confirm against the repo. If it doesn't use W&B, remove that from the site and the resume.
 4. **NL2SQL evaluation set sizes:** 44.20% is on 500 BIRD-SQL questions, but the domain-hints comparison (44.00% → 52.67%) doesn't divide evenly into 500; those percentages fit a 150- or 300-question subset. Confirm the subset size and state it on the case study so the numbers don't look inconsistent.
 5. **Mayo Clinic:** what can be said publicly beyond the resume? Is there a poster, abstract, or paper to link?
