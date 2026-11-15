@@ -436,6 +436,22 @@ main {
   margin-bottom: var(--space-3);
 }
 
+.case-study-head {
+  margin-bottom: var(--space-4);
+}
+
+.case-study-head + .section {
+  margin-top: 0;
+}
+
+.case-study-end {
+  margin: var(--space-5) 0 0;
+}
+
+.case-study-end .back-link {
+  margin-bottom: 0;
+}
+
 .case-study > p,
 .case-study > ul,
 .case-study > ol {

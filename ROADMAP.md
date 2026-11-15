@@ -167,10 +167,10 @@ Sections, in this order:
 
 Tasks:
 
-- [ ] Build the template with placeholders in every section
-- [ ] Results table scrolls horizontally inside its own container on small screens
-- [ ] "Back to projects" link at the top and bottom
-- [ ] Commit: `phase 5: case-study template`
+- [x] Build the template with placeholders in every section
+- [x] Results table scrolls horizontally inside its own container on small screens
+- [x] "Back to projects" link at the top and bottom
+- [x] Commit: `phase 5: case-study template`
 
 ---
 
