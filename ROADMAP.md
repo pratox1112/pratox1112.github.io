@@ -11,7 +11,7 @@
 ## How to use this file (instructions for Claude Code)
 
 - Work one phase at a time, in order. Stop at the end of each phase so I can review before you start the next one.
-- Check off tasks (`- [x]`) as you finish them. **Claude never runs `git commit` or `git push`.** At the end of each phase, give me the exact git commands (with a commit message naming the phase, e.g. `phase 2: scaffold pages and shared layout`) and I run them myself.
+- Check off tasks (`- [x]`) as you finish them, and commit and push `redesign` at the end of each phase with a message naming it, e.g. `phase 2: scaffold pages and shared layout`.
 - **Do not invent content.** Every claim and number on the site must come from my resume (Appendix A) or a repo README I point you to. If something is missing, insert a visible placeholder like `[TODO: p95 latency]` and add it to **Open questions** at the bottom of this file.
 - Do not touch anything outside this repo.
 - Ask before adding any dependency, external script, CDN link, or build tool.
@@ -48,7 +48,7 @@ A fast, simple portfolio that an MLE recruiter or hiring manager can skim in und
 - [x] Create a `redesign` branch from the default branch; do all further work here
 - [x] On `redesign`, remove the old site files
 - [x] Add `.nojekyll` (empty), a one-line `README.md` describing the repo, and this `ROADMAP.md`
-- [ ] Commit and push `redesign`: `phase 1: back up old site, start redesign branch`
+- [x] Commit and push `redesign`: `phase 1: back up old site, start redesign branch`
 
 ---
 
@@ -75,14 +75,14 @@ pratox1112.github.io/
     └── nl2sql.html
 ```
 
-- [ ] Create every file with valid HTML5 boilerplate: `lang="en"`, `charset`, viewport meta tag
-- [ ] Shared header (nav) and footer, identical on every page. Copy-paste is fine; no templating.
-- [ ] Per-page `<title>` and meta description
-- [ ] Open Graph and Twitter card tags so the link previews properly on LinkedIn
-- [ ] Favicon
-- [ ] `404.html` with a link back home
-- [ ] Placeholder content everywhere; real content comes in Phase 6
-- [ ] Commit: `phase 2: scaffold pages and shared layout`
+- [x] Create every file with valid HTML5 boilerplate: `lang="en"`, `charset`, viewport meta tag
+- [x] Shared header (nav) and footer, identical on every page. Copy-paste is fine; no templating.
+- [x] Per-page `<title>` and meta description
+- [x] Open Graph and Twitter card tags so the link previews properly on LinkedIn
+- [x] Favicon
+- [x] `404.html` with a link back home
+- [x] Placeholder content everywhere; real content comes in Phase 6
+- [x] Commit: `phase 2: scaffold pages and shared layout`
 
 ---
 
